@@ -1,7 +1,7 @@
 // Go supports time formatting and parsing via
 // pattern-based layouts.
 
-package main
+package mainw
 
 import (
 	"fmt"
