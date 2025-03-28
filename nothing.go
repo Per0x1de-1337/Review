@@ -6,12 +6,12 @@
 // Here's an example line filter in Go that writes a
 // capitalized version of all input text. You can use this
 // pattern to write your own Go line filters.
-package main
+package mainw
 
 import (
 	"bufio"
 	"fmt"
-	"os"
+	"os"w
 	"strings"
 )
 
