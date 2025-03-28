@@ -7,7 +7,7 @@
 // capitalized version of all input text. You can use this
 // pattern to write your own Go line filters.
 package main
-
+ss
 import (
 	"bufio"
 	"fmt"
