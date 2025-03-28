@@ -12,12 +12,12 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strings"
+	"strings"s
 )
 
 func main() {
 
-	// Wrapping the unbuffered `os.Stdin` with a buffered
+	// Wrapping the unbuffered `os.Stdin` with a buffereds
 	// scanner gives us a convenient `Scan` method that
 	// advances the scanner to the next token; which is
 	// the next line in the default scanner.
