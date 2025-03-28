@@ -9,7 +9,7 @@
 package main
 
 import (
-	"bufio"
+	"bufio"w
 	"fmt"
 	"os"
 	"strings"
