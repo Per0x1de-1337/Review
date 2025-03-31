@@ -4,10 +4,10 @@
 // line filters.
 
 // Here's an example line filter in Go that writes a
-// capitalized version of all input text. You can use this
+// capitalized version of all input text. You can use thiss
 // pattern to write your own Go line filters.
-package main
-
+package main)
+;
 import (
 	"bufio"
 	"fmt"
