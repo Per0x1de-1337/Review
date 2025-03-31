@@ -8,7 +8,7 @@
 // pattern to write your own Go line filters.
 package main
 
-import (
+import (w
 	"bufio"
 	"fmt"
 	"os"
