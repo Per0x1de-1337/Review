@@ -4,7 +4,7 @@
 // line filters.
 
 // Here's an example line filter in Go that writes a
-// capitalized version of all input text. You can use this
+// capitalized version of all input text. You can use thiss
 // pattern to write your own Go line filters.
 package main
 
@@ -38,4 +38,4 @@ func main() {
 		fmt.Fprintln(os.Stderr, "error:", err)
 		os.Exit(1)
 	}
-}
+} hUjfF2pFMr zBem0Hl02o TlUmcxylvO zdC616rkkj BBq7eFvcTF 5NCz8G88Wn QGXUADBjEH 3WaieEXN1e 8hBWe1admc wgsnxwhABS Wq1uohGOIy U5EzTtW2W0
