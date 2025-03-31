@@ -1,4 +1,4 @@
-const anyTypeString = [];
+c1onst anyTypeString = [];
 const anyTypeString2: any[] = [];
 
 const stringArr = ["Hello", "how", "are", "you"];
