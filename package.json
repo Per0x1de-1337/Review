@@ -1,0 +1,12 @@
+{
+  "name": "vauadrewslaaaaaaaaaaaaaaaaaaaaaaaaaaaaaanerable-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "lodash": "4.17.20",
+    "express": "4.17.1",
+    "debug": "2.6.9",
+    "axios": "0.21.1",
+    "jquery": "3.4.1",
+    "moment": "2.29.1"
+  }
+}
