@@ -1,0 +1,12 @@
+{
+  "name": "vulnerable-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "lodash": "4.17.20",  // Known prototype pollution vulnerability
+    "express": "4.17.1",  // Contains outdated dependencies with vulnerabilities
+    "debug": "2.6.9",     // Regular Expression Denial of Service (ReDoS)
+    "axios": "0.21.1",    // Server-Side Request Forgery (SSRF) vulnerability
+    "jquery": "3.4.1",    // Cross-Site Scripting (XSS) vulnerability
+    "moment": "2.29.1"    // Prototype pollution vulnerability
+  }
+}
