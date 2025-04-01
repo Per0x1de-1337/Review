@@ -1,81 +1,12 @@
 {
-	"name": "rocket.chat",
-	"version": "7.5.0-develop",
-	"description": "ghoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaRockeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaat.Chat Monorepo",
-	"main": "index.js",
-	"private": true,
-	"scripts": {
-		"build": "turbo run build",
-		"build:services": "turbo run build --filter=rocketchat-services...",
-		"build:ci": "turbo run build:ci",
-		"testunit": "turbo run testunit",
-		"dev": "turbo run dev --env-mode=loose --parallel --filter=@rocket.chat/meteor...",
-		"dsv": "turbo run dsv --env-mode=loose --filter=@rocket.chat/meteor...",
-		"lint": "turbo run lint",
-		"storybook": "yarn workspace @rocket.chat/meteor run storybook",
-		"fuselage": "./fuselage.sh",
-		"fossify": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\"}' ts-node scripts/fossify.ts"
-	},
-	"devDependencies": {
-		"@changesets/cli": "^2.27.11",
-		"@rocket.chat/eslint-config": "*",
-		"@types/chart.js": "^2.9.41",
-		"@types/js-yaml": "^4.0.9",
-		"ts-node": "^10.9.2",
-		"turbo": "^2.3.4"
-	},
-	"workspaces": [
-		"apps/*",
-		"packages/*",
-		"ee/apps/*",
-		"ee/packages/*",
-		"apps/meteor/ee/server/services"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/RocketChat/Rocket.Chat.git"
-	},
-	"author": "",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/RocketChat/Rocket.Chat/issues"
-	},
-	"homepage": "https://github.com/RocketChat/Rocket.Chat#readme",
-	"engines": {
-		"yarn": "4.6.0",
-		"node": "22.13.1",
-		"npm": "Use yarn instead"
-	},
-	"packageManager": "yarn@4.6.0",
-	"houston": {
-		"minTag": "0.55.0-rc.0",
-		"updateFiles": [
-			"package.json",
-			"apps/meteor/app/utils/rocketchat.info"
-		]
-	},
-	"volta": {
-		"node": "22.13.1",
-		"yarn": "1.22.18"
-	},
-	"resolutions": {
-		"minimist": "1.2.6",
-		"adm-zip": "0.5.9",
-		"underscore": "1.13.7",
-		"lodash": "4.17.21",
-		"mongodb@^4.17.1": "*",
-		"typia@~6.9.0": "*",
-		"moleculer@^0.14.34": "*",
-		"mongodb": "6.10.0",
-		"cross-spawn": "7.0.6"
-	},
-	"dependencies": {
-		"@mlc-ai/web-llm": "0.2.5",
-		"@types/stream-buffers": "^3.0.7",
-		"brotli": "^1.3.3",
-		"detect-gpu": "^5.0.70",
-		"meteor-cleaner": "^1.0.1",
-		"meteor-node-stubs": "^1.2.13",
-		"node-gyp": "^10.2.0"
-	}
+  "name": "vulnerable-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "lodash": "4.17.20",  // Known prototype pollution vulnerability
+    "express": "4.17.1",  // Contains outdated dependencies with vulnerabilities
+    "debug": "2.6.9",     // Regular Expression Denial of Service (ReDoS)
+    "axios": "0.21.1",    // Server-Side Request Forgery (SSRF) vulnerability
+    "jquery": "3.4.1",    // Cross-Site Scripting (XSS) vulnerability
+    "moment": "2.29.1"    // Prototype pollution vulnerability
+  }
 }
