@@ -1,5 +1,5 @@
 {
-  "name": "vulnerable-app",
+  "name": "vulaanerable-app",
   "version": "1.0.0",
   "dependencies": {
     "lodash": "4.17.20",
