@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Send Trigger Request to Remote Repo
         env:
-          GH_PAT: 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  # Store a Personal Access Token in Secrets
+          GH_PAT: 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  # Store a Personal Access Token in Secrets
         run: |
           curl -X POST -H "Accept: application/vnd.github.everest-preview+json" \
             -H "Authorization: token $GH_PAT" \
