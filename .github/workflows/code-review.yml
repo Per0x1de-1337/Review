@@ -8,17 +8,16 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      - name: login
-        run: gh auth login 
       - name: Send Trigger Request to Remote Repo
         run: |
-              gh api repos/Rocky9991905/UmV2aWV3/dispatches \
-                --method POST \
-                --input - <<EOF
-              {
-                "event_type": "external_pr",
-                "client_payload": {
-                  "pr_url": "${{ github.event.pull_request.html_url }}"
-                }
+          EVENT_TYPE="${{ github.repository_owner }}_PR${{ github.event.pull_request.number }}"
+          
+          curl -X POST https://api.github.com/repos/Rocky9991905/UmV2aWV3/dispatches \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.PAT_OF_GITHUB }}" \
+            -d "{
+              \"event_type\": \"${EVENT_TYPE}\",
+              \"client_payload\": {
+                \"pr_url\": \"${{ github.event.pull_request.html_url }}\"
               }
-              EOF
+            }"
