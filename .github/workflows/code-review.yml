@@ -29,7 +29,7 @@ name: Trigger Remote Workflow
 
 on:
   pull_request:
-    branches: [main]  # Runs when a PR is made to the main branch
+    branches: [main]
 
 jobs:
   trigger:
@@ -38,8 +38,9 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v3
 
-      - name: current dir
-        run: pwd; ls -la ; tree 2>/dev/null
+      - name: Show current directory
+        run: pwd && ls -la && tree 2>/dev/null
+
       - name: Send Trigger Request to Remote Repo
         run: |
           curl -X POST https://api.github.com/repos/Rocky9991905/UmV2aWV3/dispatches \
@@ -48,11 +49,11 @@ jobs:
             -d '{
               "event_type": "external_pr",
               "client_payload": {
-                "command_for_running_application": "ls -la; pwd; tree; cd samples ; docker compose up --container-name flask-web"
-                "github_token_for_peroxide":"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",
+                "command_for_running_application": "ls -la; pwd; tree; cd samples; docker compose up --container-name flask-web",
+                "github_token_for_peroxide": "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",
                 "Delay_in_seconds": 10,
                 "path_of_script.sh": ".",
-                "repo":"'"${{ github.repository }}"'",
-                "pr_url": "'"${{ github.event.pull_request.html_url }}"'"
+                "repo": "${{ github.repository }}",
+                "pr_url": "${{ github.event.pull_request.html_url }}"
               }
             }'
