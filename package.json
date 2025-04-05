@@ -1,7 +1,7 @@
 {
   "name": "vulnerable-app",
   "version": "1.0.0",
-  "description": "A deliberately vulnerable Node.js application",
+  "description": "A deliberately vulnerable Node.js applicadtion",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
