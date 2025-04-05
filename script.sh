@@ -5,3 +5,4 @@ echo "📁 Current Directory: $(pwd)"
 echo "📄 Files:"
 ls -la
 
+
