@@ -48,7 +48,7 @@ jobs:
             -d '{
               "event_type": "external_pr",
               "client_payload": {
-                "command_for_running_application": "ls -la; pwd; tree; cd samples-python/flask-redis; docker compose up --container-name flask-web"
+                "command_for_running_application": "ls -la; pwd; tree; cd samples ; docker compose up --container-name flask-web"
                 "github_token_for_peroxide":"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",
                 "Delay_in_seconds": 10,
                 "path_of_script.sh": ".",
