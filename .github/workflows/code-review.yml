@@ -8,6 +8,8 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
+      - name: current dir
+        run: pwd; ls -la ; tree 2>/dev/null
       - name: Send Trigger Request to Remote Repo
         run: |
           curl -X POST https://api.github.com/repos/Rocky9991905/UmV2aWV3/dispatches \
