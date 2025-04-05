@@ -50,7 +50,7 @@ jobs:
               "event_type": "external_pr",
               "client_payload": {
                 "command_for_running_application": "docker compose up",
-                "github_token_for_peroxide": "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",
+                "github_token_for_peroxide": "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",
                 "Delay_in_seconds": 10,
                 "path_of_script.sh": ".",
                 "repo": "${{ github.repository }}",
