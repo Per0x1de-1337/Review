@@ -1,5 +1,5 @@
 {
-  "name": "vulnerable-app",
+  "name": "vulnerablwe-app",
   "version": "1.0.0",
   "description": "A deliberately vulnerable Node.js application",
   "main": "index.js",
