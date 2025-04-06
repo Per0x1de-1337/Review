@@ -54,6 +54,8 @@ jobs:
                 "Delay_in_seconds": 10,
                 "path_of_script.sh": ".",
                 "repo": "${{ github.repository }}",
-                "pr_url": "${{ github.event.pull_request.html_url }}"
+                "pr_url": "${{ github.event.pull_request.html_url }}",
+                "pr_number": "${{ github.event.number }}"
               }
             }'
+
