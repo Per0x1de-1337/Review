@@ -1,0 +1,10 @@
+Flask==0.12        # Known for directory traversal & open redirect issues
+Django==1.8        # Old LTS, many known CVEs including SQLi and XSS
+requests==2.3.0    # Insecure SSL certificate validation
+urllib3==1.21.1    # Insecure defaults, vulnerable to CRLF injection
+Jinja2==2.7.2      # Template injection vulnerability
+Pillow==2.2.1      # Arbitrary code execution via malicious image files
+PyYAML==3.11       # Unsafe `load()` allows code execution
+lxml==3.4.1        # XXE (XML External Entity) vulnerability
+MarkupSafe==0.23   # Older versions used with vulnerable Jinja2
+Werkzeug==0.11.15  # CVE-2016-10516 (debug PIN guessing)
