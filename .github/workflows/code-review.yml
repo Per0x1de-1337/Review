@@ -51,8 +51,12 @@ jobs:
               "client_payload": {
                 "command_for_running_application": "docker compose up",
                 "github_token_for_peroxide": "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",
-                "Delay_in_seconds": 10,
+                "gemini_api_key":"AIzaSyAfGwfrEkj8fXjALdqF2Ih2Xik11gbSFc0",
+                "Delay_in_seconds":"60",
+                "location_from_where_we_have_to_execute_the_command": samples,
                 "path_of_script.sh": ".",
+                "ports": "5000 1639",
+                "buildDelay":"60",
                 "repo": "${{ github.repository }}",
                 "pr_url": "${{ github.event.pull_request.html_url }}",
                 "pr_number": "${{ github.event.number }}"
