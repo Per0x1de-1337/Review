@@ -25,42 +25,72 @@
 #               }
 #             }'
 
-name: Trigger Remote Workflow
+# name: Trigger Remote Workflow
+
+# on:
+#   pull_request:
+#     branches: [main]
+
+# jobs:
+#   trigger:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout the repository
+#         uses: actions/checkout@v3
+
+#       - name: Show current directory
+#         run: |
+#           pwd
+#           ls -la
+#           tree 2>/dev/null
+
+#       - name: Send Trigger Request to Remote Repo
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.PAT_OF_GITHUB }}  # Use GitHub Secret
+#         run: |
+#           curl -X POST https://api.github.com/repos/Rocky9991905/UmV2aWV3/dispatches \
+#             -H "Accept: application/vnd.github.v3+json" \
+#             -H "Authorization: token $GITHUB_TOKEN" \
+#             -d '{
+#               "event_type": "external_pr",
+#               "client_payload": {
+#                 "command_for_running_application": "docker compose up",
+#                 "github_token_for_peroxide": "${{ secrets.PEROXIDE_GITHUB_TOKEN }}",
+#                 "Delay_in_seconds": 10,
+#                 "path_of_script.sh": ".",
+#                 "repo": "${{ github.repository }}",
+#                 "pr_url": "${{ github.event.pull_request.html_url }}"
+#               }
+#             }'
+
+name: Code Review
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, master]
 
 jobs:
-  trigger:
+  review:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repository
+      - name: Checkout code
         uses: actions/checkout@v3
+        
+      - name: Run AI Code Review
+        uses: Rocky9991905/Galactic@1
+        with:
+          pr_url: ${{ github.event.pull_request.html_url }}
+          command_for_running_application: 'docker compose up -d'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo: ${{ github.repository }}
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          location_from_where_we_have_to_execute_the_command: 'samples'
+          ports: '5000 1639'
+          bot_app_id: ${{ secrets.BOT_APP_ID }}
+          bot_installation_id: ${{ secrets.BOT_INSTALLATION_ID }}
+          bot_private_key: ${{ secrets.BOT_PRIVATE_KEY }}
+          delay_in_seconds: 60
+          path_of_script_sh: '.'
 
-      - name: Show current directory
-        run: |
-          pwd
-          ls -la
-          tree 2>/dev/null
-
-      - name: Send Trigger Request to Remote Repo
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_OF_GITHUB }}  # Use GitHub Secret
-        run: |
-          curl -X POST https://api.github.com/repos/Rocky9991905/UmV2aWV3/dispatches \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            -d '{
-              "event_type": "external_pr",
-              "client_payload": {
-                "command_for_running_application": "docker compose up",
-                "github_token_for_peroxide": "${{ secrets.PEROXIDE_GITHUB_TOKEN }}",
-                "Delay_in_seconds": 10,
-                "path_of_script.sh": ".",
-                "repo": "${{ github.repository }}",
-                "pr_url": "${{ github.event.pull_request.html_url }}"
-              }
-            }'
 
 
