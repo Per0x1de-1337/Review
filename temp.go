@@ -21,7 +21,7 @@ import (
 	"github.com/keploy/keploy-review-agent/internal/reporter"
 	"github.com/keploy/keploy-review-agent/internal/shared"
 	"github.com/keploy/keploy-review-agent/pkg/github"
-	"github.com/keploy/keploy-review-agent/pkg/models"
+	"github.com/keploy/keploy-review-agent/pkg/modelss"
 )
 
 var pullnumber int
