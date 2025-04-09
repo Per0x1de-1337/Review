@@ -1,5 +1,5 @@
-package analyzer
-
+ package analyzer
+ 
 import (
 	"context"
 	"errors"
