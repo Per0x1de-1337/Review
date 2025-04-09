@@ -2,7 +2,7 @@
 
 # Check the server status
 curl -s -o /dev/null -w "%{http_code}" http://localhost:5000
-echo "Server status checked."
+echo "Server status dchecked."
 
 # Add a new book via POST request
 echo "Adding a new book..."
