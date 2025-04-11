@@ -50,7 +50,7 @@ type Orchestrator struct {
 
 func NewOrchestrator(cfg *config.Config) *Orchestrator {
 	aiConfig := &llm.AIConfig{
-		// MaxTokens:   cfg.AIMaxTokens,
+		// MaxTokens:   cfg.AIMaxTokens
 		Temperature: cfg.AITemperature,
 		MinSeverity: models.SeverityInfo,
 	}
