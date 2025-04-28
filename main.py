@@ -2,7 +2,7 @@
 import sys
 
 if len(sys.argv) != 2:
-    print("Usage: python3 main.py <DATA>")
+    print("Usage: python3 smain.py <DATA>")
     sys.exit(1)
 
 data = sys.argv[1] 
